@@ -1,32 +1,29 @@
 require "laurel"
 
+p Laurel.and(1, 2).to_s # => 1.to_s && 2.to_s
+
+homu_or_mami = Laurel.or("homu", "mado")
+
+p homu_or_mami == "homu"
+# => true
+
+p homu_or_mami == "mado"
+# => true
+
+p homu_or_mami == "mami"
+# => false
+
+
+# Using operators
 # define Object#& Object#| Object#!
 using Laurel::Refine
 
-def func n
-	case n
-	when Integer & 0.method(:>).to_proc
-		"minus"
-	when Integer & 0.method(:==).to_proc
-		"zero"
-	when Integer & 0.method(:<).to_proc
-		"plus"
-	else
-		"other"
-	end
-end
+p "homu" | "mado" == "homu"
+# => true
 
-p func -1
-# => "minus"
+p "homu" | "mado" == "mado"
+# => true
 
-p func 0
-# => "zero"
+p "homu" | "mado" == "mami"
+# => false
 
-p func 1
-# => "plus"
-
-p func "homu"
-# => "other"
-
-p func []
-# => "other"

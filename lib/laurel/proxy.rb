@@ -22,4 +22,9 @@ module Laurel
 			}
 		}.new(&block)
 	end
+
+	module_function
+	def proxy_all &block
+		Laurel.proxy BasicObject.instance_methods, &block
+	end
 end

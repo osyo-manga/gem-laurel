@@ -26,6 +26,16 @@ using Laurel::Refine
 (x & y).any_method # => x.any_method && y.any_method
 ```
 
+## Release Note
+
+#### 0.1.1
+
+* Bug fix `Laurel::Refine.usable`
+
+#### 0.1.0
+
+* First release
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.

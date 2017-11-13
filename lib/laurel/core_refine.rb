@@ -8,7 +8,7 @@ module Laurel module Refine
 
 	def self.usable klass
 		::Module.new do
-			refine Object do
+			refine klass do
 				include ::Laurel::Operator
 			end
 		end

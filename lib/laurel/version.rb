@@ -1,3 +1,3 @@
 module Laurel
-  VERSION = "0.l.1"
+  VERSION = "0.1.2"
 end

@@ -28,6 +28,10 @@ using Laurel::Refine
 
 ## Release Note
 
+#### 0.1.2
+
+* Fix version symbol.
+
 #### 0.1.1
 
 * Bug fix `Laurel::Refine.usable`
